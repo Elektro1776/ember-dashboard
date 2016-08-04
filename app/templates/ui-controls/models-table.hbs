@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-sm-12">
+      <div class="well">
+      {{models-table
+        data=data
+        columns=columns
+        filteringIgnoreCase=true
+        showTableFooter=true
+        useNumericPagination=true
+        delete='deleteRecord'
+        useFilteringByColumns=true
+      }}
+
+      <br />
+
+      <label>Code</label>
+      <pre>&#123;&#123;models-table data=data columns=columns filteringIgnoreCase=true showTableFooter=true useNumericPagination=true delete="deleteRecord" useFilteringByColumns=true&#125;&#125;</pre>
+
+      </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+<div class="widgets-metrics">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Metrics Widgets</h3>
+            <p>Include bootstrap progress bars, flot charts or html content inside metrics.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <!-- Stock Updates Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Acme Stock" bottomText="Closing markets at 1:00pm PST" boxShadow=true}}
+                <span class="value green"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span> 60%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Acme Stock" bottomText="Closing markets at 1:00pm PST" boxShadow=true}}
+                <span class="value green"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span> 60%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Acme Stock" bottomText="Closing markets at 1:00pm PST" boxShadow=true}}
+                <span class="value red"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span> 30%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Acme Stock" bottomText="Closing markets at 1:00pm PST" boxShadow=true}}
+                <span class="value red"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span> 30%</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Small Progress Bar -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Server Uptime" showProgressBar=true progressValue=75 showProgressLabel=true type="success" animate=true striped=true smallProgressBar=true boxShadow=true}}
+                <span class="value green">75%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Server Uptime" showProgressBar=true progressValue=75 showProgressLabel=true type="success" animate=true striped=true smallProgressBar=true boxShadow=true}}
+                <span class="value green">75%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Server Downtime" showProgressBar=true progressValue=50 showProgressLabel=true type="danger" animate=true striped=true smallProgressBar=true boxShadow=true}}
+                <span class="value red">50%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Server Downtime" showProgressBar=true progressValue=50 showProgressLabel=true type="danger" animate=true striped=true smallProgressBar=true boxShadow=true}}
+                <span class="value red">50%</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Large Progress Bar -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Services status" showProgressBar=true progressValue=75 showProgressLabel=true type="success" animate=true striped=true bottomText="Average status from 2016/01/01" boxShadow=true}}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Services status" showProgressBar=true progressValue=75 showProgressLabel=true type="success" animate=true striped=true bottomText="Average status from 2016/01/01" boxShadow=true}}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Services status" showProgressBar=true progressValue=50 showProgressLabel=true type="danger" animate=true striped=true bottomText="Average status from 2016/01/01" boxShadow=true}}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Services status" showProgressBar=true progressValue=50 showProgressLabel=true type="danger" animate=true striped=true bottomText="Average status from 2016/01/01" boxShadow=true}}
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Pie Chart Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=pieOptions data=pieData }}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=pieOptions data=pieData }}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=pieOptions data=pieData }}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=pieOptions data=pieData }}
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Line Chart Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=lineOptions data=lineData}}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=lineOptions data=lineData}}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=lineOptions data=lineData}}
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box boxShadow=true}}
+                {{flot-chart-live height="100%" options=lineOptions data=lineData}}
+            {{/metric-box}}
+        </div>
+    </div>
+
+</div>

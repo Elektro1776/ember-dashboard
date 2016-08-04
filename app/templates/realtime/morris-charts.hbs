@@ -1,0 +1,36 @@
+<div class="charts-index">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Morris Realtime Charts</h3>
+            <p class="pull-left">Use the morris component to update the chart.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Morris Chart Realtime</span>
+
+              <div class="row row-fixed-width">
+                    <div class="col-sm-3">
+                        <p><strong>Reloads:</strong> {{nReloads}} </p>
+                        <p>You can update the chart data on realtime to get instant chart updates.</p>
+                        <p><strong>F (x, v):</strong></p>
+                        <pre>{
+  x: x,
+  y: sin(PI * v / 180),
+  z: cos(PI * v / 180)
+}</pre>
+                    </div>
+                    <div class="col-sm-9">
+                        {{morris-chart type="line" options=options chartData=chartData }}
+                        <hr>
+                        <pre>&#123;&#123;morris-chart type="line" options=options chartData=chartData&#125;&#125;</pre>
+                    </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="well">
+            <div class="row">
+                <div class="col-xs-6">
+                    {{#bs-form}}
+                        {{#bs-form-group}}
+                                {{bs-form-element controlType="text" label="Title" placeholder="Title" value=title}}
+                                {{bs-form-element controlType="text" label="Message" placeholder="Message" value=message}}
+                                {{bs-form-element controlType="checkbox" label="Close Button" value=closeButton}}
+                                {{bs-form-element controlType="checkbox" label="Progress Bar" value=progressBar}}
+                                {{bs-form-element controlType="checkbox" label="Prevent Duplicates" value=preventDup}}
+                                {{bs-form-element controlType="checkbox" label="Newest On Top" value=newestOnTop}}
+                        {{/bs-form-group}}
+                    {{/bs-form}}
+                </div>
+                <div class="col-xs-6">
+                    {{#bs-form-group}}
+                    <div> <label class="control-label">Type</label> </div>
+                    <div>
+                    {{#bs-button-group value=type type="radio"}}
+                       {{#bs-button value="success"}}Success{{/bs-button}}
+                       {{#bs-button value="info"}}Info{{/bs-button}}
+                       {{#bs-button value="warning"}}Warning{{/bs-button}}
+                       {{#bs-button value="error"}}Error{{/bs-button}}
+                    {{/bs-button-group}}
+                    </div>
+                    {{/bs-form-group}}
+
+                    {{#bs-form-group}}
+                    <div> <label class="control-label">Email</label> </div>
+                    <div>
+                    {{#bs-button-group value=position type="radio"}}
+                       {{#bs-button value="toast-top-left"}}Top L{{/bs-button}}
+                       {{#bs-button value="toast-top-center"}}Top C{{/bs-button}}
+                       {{#bs-button value="toast-top-right"}}Top R{{/bs-button}}
+                       {{#bs-button value="toast-bottom-left"}}Bot L{{/bs-button}}
+                       {{#bs-button value="toast-bottom-center"}}Bot C{{/bs-button}}
+                       {{#bs-button value="toast-bottom-right"}}Bot R{{/bs-button}}
+                    {{/bs-button-group}}
+                    </div>
+                    {{/bs-form-group}}
+
+                    {{#bs-form-group}}
+                        {{bs-form-element controlType="text" label="Show Duration" placeholder="Show duration" value=showDuration}}
+                        {{bs-form-element controlType="text" label="Hide Duration" placeholder="Hide duration" value=hideDuration}}
+                    {{/bs-form-group}}
+                </div>
+            </div>
+        </div>
+
+        {{#bs-button  type="primary" icon="glyphicon glyphicon-eye-open" action="toast"}}
+            Show Toastr
+        {{/bs-button}}
+    </div>
+</div>

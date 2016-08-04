@@ -1,0 +1,97 @@
+<div class="charts-index">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Dashboard Charts <small>Easily include charts in your app.</small></h3>
+            <p class="pull-left">Use these simple components to render charts in your templates.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well">
+            <span class="block-header">ChartJS</span>
+
+              <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                        {{ember-chart type="PolarArea" data=polarArea.data options=polarArea.options legend=false}}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <label>Code</label>
+                        <pre>&#123;&#123;ember-chart type="PolarArea" data=polarArea.data options=polarArea.options legend=false&#125;&#125;</pre>
+                    </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Flot Charts</span>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    {{flot-chart height="200px" options=linesChart.options data=linesChart.data}}
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-8">
+                    <label>Code</label>
+                    <pre>&#123;&#123;flot-chart options=linesChart.options data=linesChart.data&#125;&#125;</pre>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">MorrisJS</span>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    {{morris-chart type="line" options=defaultOptions chartData=defaultData }}
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-8">
+                    <label>Code</label>
+                    <pre>&#123;&#123;morris-chart type="line" options=defaultOptions chartData=defaultData&#125;&#125;</pre>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Peity Charts</span>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                  <table class="table table-striped table-bordered table-hover">
+                      <thead>
+                        <tr><th>Inline Charts</th></tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>{{#peity-chart type="bar" options=peityOptions classNames="inline"}}5,3,9,6,5,9,7,3,5,2,2{{/peity-chart}} &nbsp;Seconds</td>
+                      </tr>
+                      <tr>
+                          <td>{{#peity-chart type="line" options=peityOptions classNames="inline"}}6,5,9,5,2,4,6,4,3,3,2{{/peity-chart}} &nbsp;Minutes</td>
+                      </tr>
+                      <tr>
+                          <td>{{#peity-chart type="bar" options=peityOptions classNames="inline"}}1,2,4,7,6,9,2,4,6,4,2{{/peity-chart}} &nbsp;Hours</td>
+                      </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-8">
+                    <label>Code</label>
+                    <pre>&#123;&#123;#peity-chart type="bar" options=peityOptions&#125;&#125;...&#123;&#123;/peity-chart&#125;&#125;</pre>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</div>

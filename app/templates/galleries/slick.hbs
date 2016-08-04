@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Slick Carousel</span>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label>Code</label>
+                    <pre>&#123;&#123;slick-carousel class="ember-slick-carousel" options=options1 ...&#125;&#125;</pre>
+                    <br />
+                    <div style="margin: 0 30px 0 30px;">
+                        {{#slick-carousel class="ember-slick-carousel" options=options1 }}
+                            {{#each images as |image|}}
+                                {{light-box href=image.src data-lightbox="slick-cats" data-title=image.caption classNames="light-box-carousel"}}
+                            {{/each}}
+                        {{/slick-carousel}}
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label>Code</label>
+                    <pre>&#123;&#123;slick-carousel class="ember-slick-carousel" options=options2 ...&#125;&#125;</pre>
+                    <br />
+                    <div style="margin: 0 30px 0 30px;">
+                        {{#slick-carousel class="ember-slick-carousel" options=options2 }}
+                            {{#each images as |image|}}
+                                <div style="background: url({{image.src}}) no-repeat center; height: 160px; width: 120px; background-size:cover; "></div>
+                            {{/each}}
+                        {{/slick-carousel}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

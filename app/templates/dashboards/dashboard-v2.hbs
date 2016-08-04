@@ -1,0 +1,61 @@
+<div class="dashboard-v2">
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-offset-4 col-lg-4 top">
+            <h3 class="pull-left">Overview</h3>
+            <a href="" class="pull-left active">Today</a>
+            <a href="" class="pull-left">Month</a>
+            <input class="pull-left" type="date">
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-8">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-4">
+                    {{#metric-box title="Product Sales" bottomText="Total Net Revenue" boxShadow=false borderLess=false badgeLabel="Today" badgeClass="bg-blue-2"}}
+                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $1,230,054</span>
+                    {{/metric-box}}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-4">
+                    {{#metric-box title="Page Views" bottomText="Daily" borderLess=false boxShadow=false badgeLabel="Today" badgeClass="bg-blue-2"}}
+                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> 2,734</span>
+                    {{/metric-box}}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-4">
+                    {{#metric-box title="Sessions" bottomText="Daily" borderLess=false boxShadow=false badgeLabel="Today" badgeClass="bg-blue-2"}}
+                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> 204</span>
+                    {{/metric-box}}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-4">
+                    {{#metric-box title="Average Revenue" bottomText="Daily" borderLess=false boxShadow=false badgeLabel="Today" badgeClass="bg-blue-2"}}
+                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $3,370</span>
+                    {{/metric-box}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div  style="background-color: white; min-height: 390px; border: 1px solid #e3e3e3; margin: 0 -31px 0 -31px; padding: 0 15px 0 15px;">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-lg-12">
+                                <div style="padding: 15px 0px 0 15px;">
+                                    <h4>Monthly Exports/Imports 2015</h4>
+                                    <hr />
+                                    {{flot-chart-live height="280px" options=linesChart.options data=linesChart.data}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-4 sticky">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <h4>Top Ten Posts</h4>
+                {{pages/stocks-table}}
+            </div>
+        </div>
+    </div>
+</div>

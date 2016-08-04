@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Simple Validation</span>
+            {{#bs-form action="submit" invalid="invalid" model=this formLayout=formLayout}}
+                {{#bs-form-group}}
+                    <div class="row">
+                        <div class="col-sm-6">
+                        {{bs-form-element controlType="text" label="Name" placeholder="Name" property="name" showValidation=showValidation}}
+                        {{bs-form-element controlType="email" label="Email" placeholder="Email" property="email" showValidation=showValidation}}
+                        {{bs-form-element controlType="text" label="Age" placeholder="Age" property="age" showValidation=showValidation}}
+                        </div>
+                        <div class="col-sm-6">
+                        {{bs-form-element controlType="select" label="Gender" placeholder="Gender" property="gender"
+                            choices=genderChoices choiceLabelProperty="name" choiceValueProperty="id" showValidation=showValidation}}
+                        <!-- Style manipulation to support validation error message on controlType Select -->
+                        {{#if showValidation}}{{#if errors.gender.length}}<div class="has-error select-error-container"><span class="help-block">{{errors.gender.[0]}}</span></div>{{/if}}{{/if}}
+                        <!-- -->
+                        {{bs-form-element controlType="password" label="Password" placeholder="Password" property="password" showValidation=showValidation}}
+                        {{bs-form-element controlType="password" label="Confirm Password" placeholder="Confirm Password" property="passwordConfirmation" showValidation=showValidation}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {{bs-form-element controlType="checkbox" label="Agree to Terms of Service" property="terms" showValidation=showValidation}}
+                            <br />
+                            {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+                            {{bs-button defaultText="Clear" type="" buttonType="button" action="clear"}}
+                        </div>
+                    </div>
+                {{/bs-form-group}}
+
+            {{/bs-form}}
+        </div>
+    </div>
+</div>
+
+

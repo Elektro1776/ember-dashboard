@@ -1,0 +1,52 @@
+{{#bs-modal title="Simple Dialog" open=openModal1}}
+   Hello world!
+{{/bs-modal}}
+
+{{#bs-modal body=false footer=false header=false open=openModal2 submitAction=(action "submit")}}
+ {{#bs-modal-header}}
+   <h4 class="modal-title"><i class="glyphicon glyphicon-alert"></i> Alert</h4>
+ {{/bs-modal-header}}
+ {{#bs-modal-body}}Are you absolutely sure you want to do that???{{/bs-modal-body}}
+ {{#bs-modal-footer as |footer|}}
+   {{#bs-button action=(action "close" target=footer) type="danger"}}Oh no, forget it!{{/bs-button}}
+   {{#bs-button buttonType="submit" type="success"}}Yeah!{{/bs-button}}
+ {{/bs-modal-footer}}
+{{/bs-modal}}
+
+<div class="widgets-modals">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">UI Modals</span>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3">
+                {{#bs-button action="toggleModal1"}}Show Simple Modal{{/bs-button}}
+              </div>
+                    <div class="col-sm-9">
+                    <pre>&#123;&#123;#bs-modal title="Simple Dialog" open=openModal1&#125;&#125;
+...
+&#123;&#123;/bs-modal&#125;&#125;
+</pre>
+                     </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3">
+                {{#bs-button action="toggleModal2"}}Show Custom Modal{{/bs-button}}
+              </div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;#bs-modal body=false footer=false header=false open=openModal2 submitAction=(action "submit")&#125;&#125;
+...
+&#123;&#123;/bs-modal&#125;&#125;
+</pre>
+                    </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>

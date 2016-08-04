@@ -1,0 +1,98 @@
+<div class="top-bar {{addClass}}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="search">
+                    {{#bs-button type="primary" icon="glyphicon glyphicon-align-justify" action="toggleNavBar" classNames="btn-sm toggle-menu-button"}}
+                        {{menuText}}
+                    {{/bs-button}}
+                    {{bs-input placeholder="Search..." classNames="pull-right search-bar"}}
+                </div>
+            </div>
+            <div class="col-xs-6 options">
+                {{bs-button classNames="btn-sm pull-right logout-button" text="Logout" action="logout"}}
+
+                <span class="top-bar-item pull-right">
+                    {{#bs-dropdown}}
+                        <!-- Note: We disable data-toggle on this component to avoid interference with summernote plugin -->
+                        {{#bs-dropdown-toggle classNames="icon-button" data-toggle=""}}
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            <span class="badge">13</span>
+                        {{/bs-dropdown-toggle}}
+                        <!-- -->
+
+                        {{#bs-dropdown-menu classNames="pull-right message-dropdown"}}
+                            <li>
+                                {{#link-to "index"}}
+                                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Inbox
+                                    <span class="annotation">You have 7 unread messages</span>
+                                {{/link-to}}
+                            </li>
+                            <li>
+                                {{#link-to "index"}}
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Followers
+                                    <span class="annotation">You have 2 new followers</span>
+                                {{/link-to}}
+                            </li>
+                            <li>
+                                {{#link-to "index"}}
+                                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> Alerts
+                                    <span class="annotation">You have 4 notifications</span>
+                                {{/link-to}}
+                            </li>
+                        {{/bs-dropdown-menu}}
+
+                    {{/bs-dropdown}}
+                </span>
+
+                <span class="top-bar-item pull-right">
+
+                    {{#bs-dropdown}}
+                        <!-- Note: We disable data-toggle on this component to avoid interference with summernote plugin -->
+                        {{#bs-dropdown-toggle classNames="icon-button" data-toggle=""}}
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                            <span class="badge info">7</span>
+                        {{/bs-dropdown-toggle}}
+                        <!-- -->
+
+                        {{#bs-dropdown-menu classNames="pull-right alert-dropdown"}}
+                            <li>
+                                {{#link-to "index"}}
+                                <div>
+                                    <img src="images/people/woman-4.jpg" class="user-photo"/>
+                                    You logged in at 02:23 PM PST
+                                </div>
+                                {{/link-to}}
+                            </li>
+                            <li>
+                                {{#link-to "index"}}
+                                <div>
+                                    <img src="images/people/woman-4.jpg" class="user-photo"/>
+                                    You logged in at 07:23 PM PST
+                                </div>
+                                {{/link-to}}
+                            </li>
+                            <li>
+                                {{#link-to "index"}}
+                                <div>
+                                    <img src="images/people/woman-4.jpg" class="user-photo"/>
+                                    You logged in at 08:14 PM PST
+                                </div>
+                                {{/link-to}}
+                            </li>
+                            <li class="view-all">
+                                {{#link-to "index"}}
+                                <div>
+                                    Read all notifications
+                                </div>
+                                {{/link-to}}
+                            </li>
+                        {{/bs-dropdown-menu}}
+
+                    {{/bs-dropdown}}
+                </span>
+
+            </div>
+        </div>
+    </div>
+</div>

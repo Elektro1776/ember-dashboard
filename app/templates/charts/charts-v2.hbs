@@ -1,0 +1,50 @@
+<div class="charts-v3">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Flot Charts <small>http://www.flotcharts.org/</small></h3>
+            <p class="pull-left">Attractive JavaScript plotting for jQuery.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{flot-chart-live height="245px" options=labelsChart.options data=labelsChart.data}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{flot-chart-live height="245px" data=multipleTypesData}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{flot-chart-live height="245px" options=thresholdOptions data=thresholdsData}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{flot-chart-live height="245px" options=symbolsOptions data=symbolsData}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{flot-chart-live height="245px" options=pieOptions data=pieData}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{flot-chart-live height="245px" options=pieOptions2 data=pieData2}}
+            </div>
+        </div>
+    </div>
+
+</div>

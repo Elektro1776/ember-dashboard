@@ -1,0 +1,128 @@
+<div class="widgets-index">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>DateTime Widgets</h3>
+            <p>Easily format date and time with the &#123;&#123;moment-format&#125;&#125; component.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Timer" bottomText=bottomText}}
+                <span class="value orange">{{format-number increasingValue format="00:00:00"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Fixed Value Time" bottomText="Value: 238, Format: 00:00:00"}}
+                <span class="value green">{{format-number 238 format="00:00:00"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Fixed Value Time" bottomText="Value: 1238, Format: 00:00:00"}}
+                <span class="value red">{{format-number 1238 format="00:00:00"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box}}
+                <div style="text-align: center;">{{clock-face size="90" showClockNumbers=true}}</div>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Date From Now" bottomText="Relative time human readable"}}
+                <span class="value md orange">{{moment-from-now date1 interval=1000}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Calendar Date" bottomText="Value: 238, Format: 00:00:00"}}
+                <span class="value md green">{{moment-calendar date1}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Date Format" bottomText="Value: 1238, Format: 00:00:00"}}
+                <span class="value md red">{{moment-format date1 outputFormat1 inputFormat}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Date Time Format" bottomText="Value: 1238, Format: 00:00:00"}}
+                <span class="value md gray">{{moment-format date1 outputFormat2 inputFormat}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Date Long"}}
+                <span class="value md orange">{{moment-format date1 outputFormat3 inputFormat}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Time Long"}}
+                <span class="value md green">{{moment-format date1 outputFormat4 inputFormat}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Date Short"}}
+                <span class="value md red">{{moment-format date1 outputFormat5 inputFormat}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Time 24h Short"}}
+                <span class="value md gray">{{moment-format date1 outputFormat6 inputFormat}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Relative Date Ago"}}
+                <span class="value md orange">{{moment-from-now date2 hideSuffix=true}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Relative Date Ago"}}
+                <span class="value md green">{{moment-from-now date3 hideSuffix=true}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Relative Date Ago"}}
+                <span class="value md red">{{moment-from-now date4 hideSuffix=true}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Relative Date Ago"}}
+                <span class="value md gray">{{moment-from-now date5 hideSuffix=true}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Calendar Date"}}
+                <span class="value sm orange">{{moment-calendar date6}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Calendar Date"}}
+                <span class="value sm green">{{moment-calendar date7}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Calendar Date"}}
+                <span class="value sm red">{{moment-calendar date8}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Calendar Date"}}
+                <span class="value sm gray">{{moment-calendar date9}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+</div>

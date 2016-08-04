@@ -1,0 +1,132 @@
+<div class="widgets-metrics">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Number Widgets</h3>
+            <p>Format number widgets using &#123;&#123;format-number&#125;&#125; component.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <!-- Format Numbers Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Numbers" bottomText="Value: 100, Format: 0.0" badgeLabel="New" badgeClass="bg-orange-0"}}
+                <span class="value">{{format-number 100 format="0.0"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Numbers" bottomText="Value: 1230974, Format: 0.0a" badgeLabel="New" badgeClass="bg-orange-0"}}
+                <span class="value">{{format-number 1230974 format="0.0a"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Numbers" bottomText="Value: 10000.1234 Format: 0,0.00" badgeLabel="New" badgeClass="bg-orange-0"}}
+                <span class="value green">{{format-number 10000.1234 format="0,0.00"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Numbers" bottomText="Value: -10000, Format: 0,0.0" badgeLabel="New" badgeClass="bg-orange-0"}}
+                <span class="value red">{{format-number -10000 format="0,0.0"}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Format Numbers Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Currency" bottomText="Value: 1000.234, Format: $0,0.00"}}
+                <span class="value">{{format-number 1000.234 format="$0,0.00"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Currency" bottomText="Value: 1000.2, Format: 0,0[.]00 $"}}
+                <span class="value">{{format-number 1000.2 format="0,0[.]00 $"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Currency" bottomText="Value: 1001, Format: $ 0,0[.]00"}}
+                <span class="value green">{{format-number 1001 format="$ 0,0[.]00"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Currency" bottomText="Value: -1000.234, Format: ($0,0)"}}
+                <span class="value red">{{format-number -1000.234 format="($0,0)"}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Format Byes Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Bytes" bottomText="Value: 100, Format: 0b"}}
+                <span class="value">{{format-number 100 format="0b"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Bytes" bottomText="Value: 2048, Format: 0 b"}}
+                <span class="value">{{format-number 2048 format="0 b"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Bytes" bottomText="Value: 7884486213, Format: 0.0b"}}
+                <span class="value green">{{format-number 7884486213 format="0.0b"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Bytes" bottomText="Value: 3467479682787, Format: (0.000 b)"}}
+                <span class="value red">{{format-number 3467479682787 format="(0.000 b)"}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Format Percentages Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Percentages" bottomText="Value: 1, Format: 0%"}}
+                <span class="value">{{format-number 1 format="0%"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Percentages" bottomText="Value: 0.97487, Format: 0.000%"}}
+                <span class="value">{{format-number 0.97487 format="0.000%"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Percentages" bottomText="Value: 0.43, Format: 0 %"}}
+                <span class="value green">{{format-number 0.43 format="0 %"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Percentages" bottomText="Value: -0.43, Format: (0.000 %)"}}
+                <span class="value red">{{format-number -0.43 format="(0.000 %)"}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <!-- Format Percentages Box -->
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Large Widget" isLarge="true" badgeLabel="Number" badgeClass="bg-blue-2"}}
+                <span class="value">{{format-number 1 format="0%"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3">
+            {{#metric-box title="Large Widget" isLarge="true" badgeLabel="Number" badgeClass="bg-blue-2"}}
+                <span class="value">{{format-number 0.974878234 format="0.00%"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3 Widget">
+            {{#metric-box title="Large" isLarge="true" badgeLabel="Number" badgeClass="bg-blue-2"}}
+                <span class="value green"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span> {{format-number 0.43 format="0.0%"}}</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-12 col-md-3 Widget">
+            {{#metric-box title="Large" isLarge="true" badgeLabel="Number" badgeClass="bg-blue-2"}}
+                <span class="value red"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span> {{format-number -0.43 format="0.0%"}}</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+</div>

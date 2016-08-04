@@ -1,0 +1,31 @@
+<div id="emberjsthemes-carousel" class="emberjsthemes-carousel carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {{#each imageList as |image index|}}
+    <li data-target="#emberjsthemes-carousel" data-slide-to="{{index}}"></li>
+    {{/each}}
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+  {{#each imageList as |image index|}}
+    <div class="item {{if image.active "active"}}">
+      <img src="{{image.src}}" class="emberjsthemes-carousel-image">
+      <div class="carousel-caption">
+        {{image.caption}}
+      </div>
+    </div>
+  {{/each}}
+  </div>
+
+  <a class="left carousel-control" href="#emberjsthemes-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">{{prevWord}}</span>
+  </a>
+
+  <a class="right carousel-control" href="#emberjsthemes-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">{{nextWord}}</span>
+  </a>
+
+</div>

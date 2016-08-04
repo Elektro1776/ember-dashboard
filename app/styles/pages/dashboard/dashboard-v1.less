@@ -1,0 +1,71 @@
+.dashboard-v1 {
+
+    margin-top: -20px;
+
+    .index-block {
+        height: 260px !important;
+    }
+
+    table.index-block {
+        background-color: #fff;
+        thead {
+            background-color: #eee;
+        }
+    }
+
+    .panels {
+        overflow-y: auto;
+        height: calc(~"100% - 36px");
+    }
+
+    .appointments {
+        overflow-y: hidden;
+        min-height: 240px;
+        display: block;
+        margin: 0;
+        tbody, tr+tr td+td{
+            width: 100%;
+        }
+    }
+
+    .top-section {
+        .metric {
+            background-color: #f7f7f7 !important;
+        }
+
+        .chart-badge {
+            background-color: #FFE4B5;
+            color: #000;
+            font-size: 10px;
+            font-weight: 300;
+        }
+    }
+
+    .bottom-section {
+        background-color: #eee;
+        margin: 0 -15px 0 -15px;
+        padding: 0 15px 0 15px;
+        border-top: 1px solid #e3e3e3;
+
+        .metric {
+            .round-borders;
+        }
+    }
+
+    .user-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        float: left;
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .panel {
+        overflow-y: hidden;
+    }
+
+    .panel-body {
+        border-bottom: 1px solid #e3e3e3;
+    }
+}

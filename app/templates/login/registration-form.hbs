@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+
+    <div class="col-sm-8">
+      <div class="panel panel-default login-form">
+        <div class="panel-heading">
+          <h3 class="panel-title">Registration Form</h3>
+        </div>
+        <div class="panel-body">
+            {{#bs-form formLayout="horizontal" model=this action="register"}}
+              {{bs-form-element controlType="text" label="First Name" placeholder="First Name" property="firstName"}}
+              {{bs-form-element controlType="text" label="Last Name" placeholder="Last Name" property="lastName"}}
+              {{bs-form-element controlType="email" label="Email" placeholder="Email" property="email"}}
+              {{bs-form-element controlType="password" label="Password" placeholder="Password" property="password"}}
+              {{bs-form-element controlType="password" label="Confirm Password" placeholder="Confirm Password" property="passwordConfirmation"}}
+              {{bs-form-element controlType="checkbox" label="I Agree with the terms or service" property="terms"}}
+              {{#bs-form-group}}
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                  {{#link-to "login.registration-form"}}View Terms of Service{{/link-to}}
+                </div>
+              {{/bs-form-group}}
+              <div class="pull-right">
+
+                {{bs-button defaultText="Register" type="primary" buttonType="submit"}}
+              </div>
+            {{/bs-form}}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+    </div>
+</div>

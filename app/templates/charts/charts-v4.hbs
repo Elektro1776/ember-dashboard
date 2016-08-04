@@ -1,0 +1,37 @@
+<div class="charts-v1" style="overflow: hidden;">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Morris Charts #2 <small>http://morrisjs.github.io/morris.js/</small></h3>
+            <p class="pull-left">Additional morris charts samples.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{morris-chart type="line" options=defaultOptions chartData=defaultData }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{morris-chart type="area" options=defaultOptions chartData=defaultData }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{morris-chart type="area" options=behaveLikeLineOptions}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <div class="well">
+                {{morris-chart type="donut" options=defaultOptions chartData=doutData }}
+            </div>
+        </div>
+    </div>
+
+</div>

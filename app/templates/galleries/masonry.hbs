@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Masonry Grid</span>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label>Code</label>
+                    <pre>&#123;&#123;#masonry-grid gutter=15 isFitWidth=true columnWidth=200 items=images as |image|&#125;&#125;...&#123;&#123;/masonry-grid&#125;&#125;</pre>
+                    <br />
+                    <div>
+                    {{#masonry-grid gutter=15 isFitWidth=true columnWidth=200 items=images as |image|}}
+                        <div style="margin-bottom: 15px;">
+                            {{light-box href=image.src data-lightbox="slick-cats" data-title=image.caption classNames="masonry-image"}}
+                            {{!-- <div><span>{{image.caption}}</span></div> --}}
+                        </div>
+                    {{/masonry-grid}}
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</div>
+

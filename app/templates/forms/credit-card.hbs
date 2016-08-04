@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">Credit Card Form</span>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="center">
+                      {{credit-card-ext number=cardValues.number name=cardValues.name expiry=cardValues.expiry cvc=cardValues.cvc width="100%"}}
+                      <br />
+                      <div class="ui input">
+                          <button type="button" class="btn btn-primary" {{action "getValues"}}>Get Values</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <table class="table table-striped table-bordered table-hover">
+                      <thead>
+                        <tr><th>Bound Property</th><th>Value</th></tr>
+                      </thead>
+                      <tbody>
+                      <tr><td>Number</td><td>{{cardValues.number}}</td></tr>
+                      <tr><td>Name</td><td>{{cardValues.name}}</td></tr>
+                      <tr><td>Expiration</td><td>{{cardValues.expiry}}</td></tr>
+                      <tr><td>CVC</td><td>{{cardValues.cvc}}</td></tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,94 @@
+<div class="widgets-index">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>UI Controls</h3>
+            <p>Use these controls to build your dashboard UI elements. Easily add components for breadcrumbs, calendars, font-awesome icons, toastr alerts and more.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="well">
+            <span class="block-header">UI Controls</span>
+
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"> {{bread-crumbs}} </div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;bread-crumbs&#125;&#125;</pre> </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><p class="alert">Full Calendar</p></div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;full-calendar events=events eventClick=(action "clicked") header=header&#125;&#125;</pre> </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><p class="alert">Font-Awesome Icons: {{fa-icon "camera"}}</p></div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;fa-icon "camera"&#125;&#125;</pre> </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><img src="images/toastr-examples.jpg" width="100%" style="max-width: 300px;"></div>
+                    <div class="col-sm-9">
+                      <pre>this.toast.success('Success!', 'You are awesome!');</pre>
+                      <br />
+                      <pre>this.toast.danger('Oops!', 'This is not good!');</pre>
+                    </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><div class="bg-white silver-border round-borders" style="padding: 10px;">{{ui-slider}}</div></div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;ui-slider&#125;&#125;</pre> </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3">{{ember-spinner classNames="dashboard-spinner" lines=8 width=3 radius=2 speed="1.0"}}</div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;ember-spinner classNames="dashboard-spinner" lines=8 width=3 radius=2 speed="1.0"&#125;&#125;</pre> </div>
+              </div>
+
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><div style="text-align: center;">{{x-toggle size="medium" toggled=true}}</div></div>
+                    <div class="col-sm-9"> <pre>&#123;&#123;x-toggle size="medium" toggled=true&#125;&#125;</pre> </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><p class="alert">Modal Windows</p></div>
+                    <div class="col-sm-9">
+                    <pre>&#123;&#123;#bs-modal title="Simple Dialog" open=openModal1&#125;&#125;
+...
+&#123;&#123;/bs-modal&#125;&#125;
+</pre>              </div>
+              </div>
+
+              <hr>
+
+              <div class="row row-fixed-width">
+              <div class="col-sm-3"><p class="alert">Tables</p></div>
+                    <div class="col-sm-9">
+                      <pre>&#123;&#123;models-table data=data columns=columns filteringIgnoreCase=true ...&#125;&#125;</pre>
+                    </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,134 @@
+<div class="option-list-navigation">
+    <div class="pull-left logged-user-panel">
+        <div class="pull-left">
+            <img src="images/people/woman-4.jpg" class="user-photo"/>
+        </div>
+        <div class="pull-left user-info">
+            <span class="light-text-1 bold">Ember Dashboard</span>
+            <br/>
+            <span class="sub-text-2 light-text-2">
+                <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Administrator</a>
+            </span>
+        </div>
+    </div>
+    <div class="clearfix options">
+         {{#bs-accordion selected=selectedMenu}}
+            {{#bs-accordion-item value="home" title="Home" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "dashboards.dashboard-v1"}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard v.1{{/link-to}}</li>
+                    <li>{{#link-to "dashboards.dashboard-v2"}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard v.2{{/link-to}}</li>
+                    <li>{{#link-to "dashboards.dashboard-v3"}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard v.3{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            {{#bs-accordion-item value="charts" title="Charts" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "charts.index"}}<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Charts{{/link-to}}</li>
+                    <li>{{#link-to "charts.charts-v1"}}<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Charts v.1{{/link-to}}</li>
+                    <li>{{#link-to "charts.charts-v2"}}<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Charts v.2{{/link-to}}</li>
+                    <li>{{#link-to "charts.charts-v3"}}<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Charts v.3{{/link-to}}</li>
+                    <li>{{#link-to "charts.charts-v4"}}<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Charts v.4{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            {{#bs-accordion-item value="realtime" title="Realtime Charts" classNames="item"}}
+                <ul>
+                    {{!-- <li>{{#link-to "realtime.index"}}<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Realtime{{/link-to}}</li> --}}
+                    <li>{{#link-to "realtime.flot-charts"}}<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Flot Charts{{/link-to}}</li>
+                    <li>{{#link-to "realtime.morris-charts"}}<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Morris Charts{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            {{#bs-accordion-item value="widgets" title="Widgets" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "widgets.index"}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Widgets{{/link-to}}</li>
+                    <li>{{#link-to "widgets.metrics"}}<span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Metrics{{/link-to}}</li>
+                    <li>{{#link-to "widgets.numbers"}}<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Numbers{{/link-to}}</li>
+                    <li>{{#link-to "widgets.dates"}}<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Date Time{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            {{#bs-accordion-item value="forms" title="Forms" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "forms.index"}}<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Forms{{/link-to}}</li>
+                    <li>{{#link-to "forms.simple-validation"}}<span class="glyphicon glyphicon-text-color" aria-hidden="true"></span> Simple Validation{{/link-to}}</li>
+                    <li>{{#link-to "forms.input-masks"}}<span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> Input Masks{{/link-to}}</li>
+                    <li>{{#link-to "forms.date-picker"}}<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Date Time Picker{{/link-to}}</li>
+                    <li>{{#link-to "forms.power-select"}}<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> Power Select{{/link-to}}</li>
+                    <li>{{#link-to "forms.text-editor"}}<span class="glyphicon glyphicon-text-size" aria-hidden="true"></span> Text Editor{{/link-to}}</li>
+                    <li>{{#link-to "forms.file-upload"}}<span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span> File Upload{{/link-to}}</li>
+                    <li>{{#link-to "forms.credit-card"}}<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> Credit Card{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            {{#bs-accordion-item value="controls" title="UI Controls" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "ui-controls.index"}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Controls{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.breadcrumbs"}}<span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span> Breadcrumbs{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.calendar"}}<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendar{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.font-awesome"}}<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Icons{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.toastr"}}<span class="glyphicon glyphicon-flash" aria-hidden="true"></span> Toastr{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.slider"}}<span class="glyphicon glyphicon-adjust" aria-hidden="true"></span> Slider{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.spinner"}}<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Spinner{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.modals"}}<span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span> Modals{{/link-to}}</li>
+                    <li>{{#link-to "ui-controls.models-table"}}<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Tables{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            <!--
+            {{#bs-accordion-item value="tables" title="Tables" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "tables.index"}}<span class="glyphicon glyphicon-list-all" aria-hidden="true"></span> Tables{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            -->
+            {{#bs-accordion-item value="galleries" title="Galleries" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "galleries.lightbox"}}<span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Lightbox{{/link-to}}</li>
+                    <li>{{#link-to "galleries.carousel"}}<span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Carousel{{/link-to}}</li>
+                    <li>{{#link-to "galleries.slick"}}<span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Slick Carousel{{/link-to}}</li>
+                    <li>{{#link-to "galleries.float-grid"}}<span class="glyphicon glyphicon-th" aria-hidden="true"></span> Float Grid{{/link-to}}</li>
+                    <li>{{#link-to "galleries.masonry"}}<span class="glyphicon glyphicon-th" aria-hidden="true"></span> Masonry{{/link-to}}</li>
+                    <li>{{#link-to "galleries.justified"}}<span class="glyphicon glyphicon-th" aria-hidden="true"></span> Justified{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            {{#bs-accordion-item value="login" title="Login" classNames="item"}}
+                <ul>
+                    <li>{{#link-to "login.login-form"}}<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login Form{{/link-to}}</li>
+                    <li>{{#link-to "login.registration-form"}}<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registration{{/link-to}}</li>
+                    <li>{{#link-to "login.password-recovery"}}<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Password Recovery{{/link-to}}</li>
+                    <li>{{#link-to "login.lock-screen"}}<span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Lock Screen{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            <!--
+            {{#bs-accordion-item value="landing" title="Landing Page"}}
+                <ul>
+                    <li>{{#link-to "landing.landing-page"}}<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Landing Page{{/link-to}}</li>
+                </ul>
+            {{/bs-accordion-item}}
+            -->
+            {{#bs-accordion-item value="theme-options" title="Theme Options" classNames="item"}}
+                <ul>
+                    <li class="theme-option">
+                        <a>Auto hide/show menu </a>
+                        <span>{{x-toggle size='small' value=autoHideMenu toggled=autoHideMenu}}</span>
+                    </li>
+                    <li class="theme-option">
+                        <a>Non fixed Top Bar </a>
+                        <span>{{x-toggle size='small' value=nonFixedTopBar toggled=nonFixedTopBar}}</span>
+                    </li>
+                    <li class="theme-option">
+                        <a>Non fixed Bottom Bar </a>
+                        <span>{{x-toggle size='small' value=nonFixedBottomBar toggled=nonFixedBottomBar}}</span>
+                    </li>
+                    <li class="theme-option">
+                        <a>Hide Top Bar </a>
+                        <span>{{x-toggle size='small' value=hideTopToolbar toggled=hideTopToolbar}}</span>
+                    </li>
+                    <li class="theme-option">
+                        <a>Hide Bottom Bar </a>
+                        <span>{{x-toggle size='small' value=hideBottomToolbar toggled=hideBottomToolbar}}</span>
+                    </li>
+                    <li class="theme-option">
+                        <a>Hide Bread Crumbs </a>
+                        <span>{{x-toggle size='small' value=hideBreadCrumbs toggled=hideBreadCrumbs}}</span>
+                    </li>
+                </ul>
+            {{/bs-accordion-item}}
+         {{/bs-accordion}}
+    </div>
+</div>

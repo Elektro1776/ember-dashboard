@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-12">
+        <p>Get over 650 scalable vector icons from Font-Awesome library anywhere in your app just by adding the component.</p>
+        <div class="well">
+          <pre>&#123;&#123;fa-icon "star"&#125;&#125; {{fa-icon "star"}}</pre>
+              <div class="row dashboard-fontawesome-icon-list">
+                    {{fa-icon "star" classNames="fa-6 dashboard-fa"}}
+                    {{fa-icon "star" classNames="fa-5 dashboard-fa"}}
+                    {{fa-icon "star" classNames="fa-4 dashboard-fa"}}
+                    {{fa-icon "star" classNames="fa-3 dashboard-fa"}}
+                    {{fa-icon "star" classNames="fa-2 dashboard-fa"}}
+                    {{fa-icon "star" classNames="fa-1 dashboard-fa"}}
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Web Application Icons</h4>
+    </div>
+</div>
+
+<div class="row">
+{{#each webIcon as |icon|}}
+    <div class="fa-hover col-xs-3"><i class="fa fa-{{icon}}"></i> {{icon}}</div>
+{{/each}}
+</div>
+
+<br >
+
+<div class="row">
+    <div class="col-xs-12">
+        <p class="alert alert-info">
+            See the complete list of 650 available font icons on <a class="active" href="https://fortawesome.github.io/Font-Awesome/icons/">https://fortawesome.github.io/Font-Awesome/icons/</a>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="well">
+      <span class="block-header">Input Masks</span>
+      <div class="row">
+
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Phone Number: {{#unless isPhoneEmpty}} {{phone}} {{else}}(000) 000-0000{{/unless}}</label>
+            <div class="input-group">
+            <div class="input-group-addon"> <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></div>
+            {{input-formatted pattern="({{999}}) {{999}}-{{9999}}" value=phone persistent="true" class="form-control" placeholder="(000) 000-0000"}}
+            </div>
+          {{/bs-form-group}}
+
+          {{#bs-form-group}}
+            <label class="control-label">Credit Card Number: {{#unless isCreditCardEmpty}} {{creditcard}} {{else}}0000-0000-0000-0000{{/unless}}</label>
+            <div class="input-group">
+            <div class="input-group-addon"> <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span></div>
+            {{input-formatted pattern="{{9999}}-{{9999}}-{{9999}}-{{9999}}" value=creditcard persistent="true" class="form-control" placeholder="0000-0000-0000-0000"}}
+            </div>
+          {{/bs-form-group}}
+
+          {{#bs-form-group}}
+            <label class="control-label">Zip Code: 00000-0000</label>
+            <div class="input-group">
+            <div class="input-group-addon"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span></div>
+            {{input-formatted pattern="{{99999}}-{{9999}}" persistent="true" value=zip class="form-control" placeholder="00000-0000"}}
+            </div>
+          {{/bs-form-group}}
+        </div>
+
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Date Short: MM/DD/YY</label>
+            <div class="input-group">
+            <div class="input-group-addon"> <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></div>
+            {{input-formatted pattern="{{99}}/{{99}}/{{99}}" persistent="true" class="form-control" placeholder="MM-DD-YY" value=yearShort}}
+            </div>
+          {{/bs-form-group}}
+
+          {{#bs-form-group}}
+            <label class="control-label">Date Long: MM/DD/YYYY</label>
+            <div class="input-group">
+            <div class="input-group-addon"> <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></div>
+            {{input-formatted pattern="{{99}}/{{99}}/{{9999}}" persistent="true" class="form-control" placeholder="MM/DD/YYYY" value=yearLong}}
+            </div>
+          {{/bs-form-group}}
+
+          {{#bs-form-group}}
+            <label class="control-label">SSN: 000-00-0000</label>
+            <div class="input-group">
+            <div class="input-group-addon"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+            {{input-formatted pattern="{{999}}-{{99}}-{{9999}}" persistent="true" class="form-control" placeholder="000-00-0000" value=ssn}}
+            </div>
+          {{/bs-form-group}}
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <br />
+          {{bs-button defaultText="Submit" type="primary" buttonType="submit" action="submit"}}
+          {{bs-button defaultText="Clear" type="" buttonType="button" action="clear"}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

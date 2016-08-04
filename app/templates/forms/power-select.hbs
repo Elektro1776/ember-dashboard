@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="well">
+      <span class="block-header">Power Select</span>
+
+      <div class="row">
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Select with Filter: {{destination}}</label>
+            {{#power-select selected=destination options=cities allowClear=true onchange=(action "chooseDestination") as |name| }}
+              {{name}}
+            {{/power-select}}
+          {{/bs-form-group}}
+        </div>
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Multiple Select: {{selectedCities}}</label>
+            {{#power-select-multiple
+              selected=selectedCities
+              options=cities
+              onchange=(action (mut selectedCities))
+              onkeydown=(action "handleKeydown")
+              as |name|
+            }}
+              {{name}}
+            {{/power-select-multiple}}
+          {{/bs-form-group}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">
+              Markup Select: {{user.name}}</label>
+              {{#power-select
+                options=users
+                selected=user
+                selectedItemComponent="selected-item-user"
+                searchField="name"
+                onchange=(action (mut user))
+                as |user|
+              }}
+                <div style="padding: 5px;">
+                  <img src="{{user.imgUrl}}" style="width: 40px; height: 40px; border-radius: 20px; display: inline; margin-right: 10px;">
+                  <strong>{{user.name}}</strong>, Age: <i>{{user.age}}</i>
+                </div>
+              {{/power-select}}
+          {{/bs-form-group}}
+        </div>
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Group Select: {{number}}</label>
+              {{#power-select
+                options=groupedNumbers
+                selected=number
+                onchange=(action (mut number))
+                as |num|
+              }}
+                {{num}}
+              {{/power-select}}
+            {{/bs-form-group}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Placeholder:</label>
+              {{#power-select
+                options=cities
+                placeholder="Please, select one destination"
+                onchange=(action (mut city))
+                as |city|
+              }}
+                {{city}}
+              {{/power-select}}
+            {{/bs-form-group}}
+        </div>
+        <div class="col-sm-6">
+          {{#bs-form-group}}
+            <label class="control-label">Disabled:</label>
+              {{#power-select
+                options=names
+                disabled=true
+                selected=name
+                onchange=(action (mut name))
+                as |name|
+              }}
+                {{name}}
+              {{/power-select}}
+          {{/bs-form-group}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <br />
+          {{bs-button defaultText="Submit" type="primary" buttonType="submit" click=(action "submit") }}
+          {{bs-button defaultText="Clear" type="" buttonType="button"}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

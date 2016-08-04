@@ -1,0 +1,54 @@
+<div class="charts-v3">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>ChartsJS <small>http://www.chartjs.org/</small></h3>
+            <p class="pull-left">Simple, clean and engaging charts for designers and developers.</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-lg-6">
+        <div class="well">
+            <div>
+                {{ember-chart type="PolarArea" data=polarArea.data options=polarArea.options legend=false}}
+            </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-lg-6">
+        <div class="well">
+            <div>
+                {{ember-chart type="Line" data=lineChart.data options=lineChart.options legend=false}}
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-lg-6">
+        <div class="well">
+            <div>
+                {{ember-chart type="Bar" data=barChart.data options=barChart.options legend=false}}
+            </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-lg-6">
+        <div class="well">
+            <div>
+                {{ember-chart type="Radar" data=radarChart.data options=barChart.options legend=false}}
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>

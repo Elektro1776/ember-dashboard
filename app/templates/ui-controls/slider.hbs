@@ -1,0 +1,191 @@
+<div class="row">
+    <div class="col-xs-4">
+        <div class="well">
+        {{ui-slider
+            value=value
+            min=min
+            max=max
+            step=1
+            orientation='horizontal'
+            tooltip=tooltip
+            disabled=false
+            handle=handle
+            disabled=disabled
+            selection="after"
+            tooltipPosition="bottom"}}
+        </div>
+
+        <br />
+
+        <div class="center">
+        <div class="well center" style="display: inline-block; margin-left: auto; margin-right: auto;">
+        {{ui-slider
+            value=value
+            min=min
+            max=max
+            step=1
+            orientation='vertical'
+            tooltip=tooltip
+            disabled=false
+            handle=handle
+            disabled=disabled
+            selection="after"
+            tooltipPosition="bottom"}}
+        </div>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="well">
+            <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Properties</th>
+                <th>Values</th>
+            </tr/>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Value: </td>
+                    <td> {{input value=value}} </td>
+                </tr>
+                <tr>
+                    <td>Min: </td>
+                    <td> {{input value=min}} </td>
+                </tr>
+                <tr>
+                    <td>Max: </td>
+                    <td> {{input value=max}} </td>
+                </tr>
+                <tr>
+                    <td>Tooltip: </td>
+                    <td>
+                        {{#bs-button-group value=tooltip type="radio"}}
+                           {{#bs-button value="show"}}show{{/bs-button}}
+                           {{#bs-button value="hide"}}hide{{/bs-button}}
+                           {{#bs-button value="always"}}always{{/bs-button}}
+                        {{/bs-button-group}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shape: </td>
+                    <td>
+                        {{#bs-button-group value=handle type="radio"}}
+                           {{#bs-button value="round"}}round{{/bs-button}}
+                           {{#bs-button value="square"}}square{{/bs-button}}
+                           {{#bs-button value="triangle"}}triangle{{/bs-button}}
+                           {{#bs-button value="rect"}}rect{{/bs-button}}
+                        {{/bs-button-group}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Disabled: </td>
+                    <td>
+                        {{#bs-button-group value=disabledState type="radio"}}
+                           {{#bs-button value="false"}}enabled{{/bs-button}}
+                           {{#bs-button value="true"}}disabled{{/bs-button}}
+                        {{/bs-button-group}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <div class="well">
+        {{ui-slider
+            value=value
+            min=min
+            max=max
+            mood=mood}}
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="well">
+            <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Properties</th>
+                <th>Values</th>
+            </tr/>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mood: </td>
+                    <td>
+                        {{#bs-button-group value=mood type="radio"}}
+                           {{#bs-button value="none"}}none{{/bs-button}}
+                           {{#bs-button value="success"}}success{{/bs-button}}
+                           {{#bs-button value="info"}}info{{/bs-button}}
+                           {{#bs-button value="warning"}}warning{{/bs-button}}
+                           {{#bs-button value="error"}}error{{/bs-button}}
+                        {{/bs-button-group}}
+                     </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <div class="well">
+             {{ui-slider
+                 ticks='0,100,200'
+                 ticksLabels='$0,$100,$200'
+                 ticksSnapBounds=15
+                 tooltip='hide'
+                 value=rangeValue
+                 min=0
+                 max=200 }}
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="well">
+            <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Properties</th>
+                <th>Values</th>
+            </tr/>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Value: </td>
+                    <td>{{rangeValue}}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-4">
+        <div class="well">
+            {{range-slider mood="info" value=range}}
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="well">
+            <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Properties</th>
+                <th>Values</th>
+            </tr/>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Range: </td>
+                    <td>{{range}}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

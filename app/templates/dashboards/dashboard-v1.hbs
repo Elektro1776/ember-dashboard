@@ -1,0 +1,167 @@
+<div class="dashboard-v1">
+
+    <div class="top-section">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Ember Dashboard <small>by EmberJsThemes.com</small></h3>
+                <p class="pull-left">Welcome to your dashboard. You have 7 {{fa-icon 'bell'}} and 13 {{fa-icon 'envelope'}}.</p>
+                <p class="pull-right">{{fa-icon 'user'}} Last login Jan 05 2016 11:32am</p>
+            </div>
+        </div>
+
+        <div class="clearfix" style="clear: both;"> <hr> </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <table class="table table-striped table-bordered table-hover index-block">
+                    <thead>
+                    <tr> <th style="width: 50px;"></th> <th>Company</th> <th>Gains</th><th>Date</th> <th style="width: 50px;">Volume</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="badge bg-blue-2">101</span></td>
+                        <td>ACME Inc.</td> <td><span class="green">{{fa-icon "arrow-up"}} 84,4%</span></td>
+                        <td>{{fa-icon "calendar"}} 01/12/2016</td>
+                        <td>{{#peity-chart type="bar" options=peityOptions}}5,3,9,6,5,9,7,3,5,2{{/peity-chart}}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge bg-blue-2">102</span></td> <td>ICCA Inc.</td>
+                        <td><span class="green">{{fa-icon "arrow-up"}} 56,5%</span></td>
+                        <td>{{fa-icon "calendar"}} 08/17/2015</td>
+                        <td>{{#peity-chart type="bar" options=peityOptions}}6,5,9,5,3,9,7,3,5,2{{/peity-chart}}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge bg-blue-2">103</span></td>
+                        <td>BALY Inc.</td> <td><span class="green">{{fa-icon "arrow-up"}} 43,3%</span></td>
+                        <td>{{fa-icon "calendar"}} 06/26/2015</td>
+                        <td>{{#peity-chart type="bar" options=peityOptions}}1,2,4,7,6,9,7,5,3,2{{/peity-chart}}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge bg-blue-2">104</span></td> <td>GOLD Inc.</td>
+                        <td><span class="red">{{fa-icon "arrow-down"}} 13,6%</span></td>
+                        <td>{{fa-icon "calendar"}} 02/05/2015</td>
+                        <td>{{#peity-chart type="bar" options=peityOptions}}1,1,4,6,6,2,1,7,5,2{{/peity-chart}}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge bg-blue-2">105</span></td> <td>DUSS Inc.</td>
+                        <td><span class="red">{{fa-icon "arrow-down"}} 03,1%</span></td>
+                        <td>{{fa-icon "calendar"}} 01/13/2015</td>
+                        <td>{{#peity-chart type="bar" options=peityOptions}}2,4,6,4,3,3,4,6,4,2{{/peity-chart}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <div class="silver-border" style="height: 260px; padding-left: 15px; padding-right: 15px; margin-bottom: 20px;">
+                    <div>
+                        <h5>{{fa-icon 'area-chart'}} Realtime Statistics <span class="pull-right badge chart-badge">30ms update</span></h5>
+                        {{flot-chart-live height="210px" data=flotChartData options=flotChartOptions}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-lg-3">
+                {{#metric-box title="Product Sales" bottomText="Today Total Net Revenue." boxShadow=false borderLess=false badgeLabel="Today" badgeClass="bg-blue-2"}}
+                    <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $1,230,054</span>
+                {{/metric-box}}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-3">
+                {{#metric-box title="Year Goal" borderLess=false progressValue=80 showProgressLabel=true type="success" animate=true striped=true
+                bottomText="Year To Date Goal of 2016." boxShadow=false
+                    badgeLabel="Year" badgeClass="bg-blue-2"}}
+                    <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $18,758,321</span>
+                {{/metric-box}}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-3">
+                {{#metric-box title="Daily Gains" showProgressBar=true borderLess=false progressValue=75 showProgressLabel=true type="success" animate=true striped=true smallProgressBar=true boxShadow=false
+                 badgeLabel="Daily" badgeClass="bg-blue-2"}}
+                    <span class="value green">75%</span>
+                {{/metric-box}}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-3">
+                {{#metric-box title="Month Average" borderLess=false boxShadow=false badgeLabel="Weekly" badgeClass="bg-blue-2" bottomText="Day By Day Revenue."}}
+                    <div style="margin-top: 20px;">
+                        {{#peity-chart type="bar" options=peityLargeOptions}}2,4,6,4,3,3,4,6,4,2{{/peity-chart}}
+                    </div>
+                {{/metric-box}}
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="bottom-section">
+
+        <br />
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-4">
+                <div class="panel panel-default" style="height: 330px;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Upcoming Appointments</h3>
+                    </div>
+                    <div class="panels">
+                        <div class="panel-body">
+                            <table class="table table-hover appointments">
+                                <tbody>
+                                <tr><td><span class="badge bg-blue-2">1</span></td><td>{{fa-icon "user"}} John Schmith</td><td><nobr>{{fa-icon "clock-o"}} 1:30pm</nobr></td></tr>
+                                <tr><td><span class="badge bg-blue-2">2</span></td><td>{{fa-icon "user"}} David Goldman</td><td><nobr>{{fa-icon "clock-o"}} 2:00pm</nobr></td></tr>
+                                <tr><td><span class="badge bg-blue-2">3</span></td><td>{{fa-icon "user"}} Robert Scott</td><td><nobr>{{fa-icon "clock-o"}} 2:30pm</nobr></td></tr>
+                                <tr><td><span class="badge bg-blue-2">4</span></td><td>{{fa-icon "user"}} James Solis</td><td><nobr>{{fa-icon "clock-o"}} 3:00pm</nobr></td></tr>
+                                <tr><td><span class="badge bg-blue-2">5</span></td><td>{{fa-icon "user"}} George Lewis</td><td><nobr>{{fa-icon "clock-o"}} 3:30pm</nobr></td></tr>
+                                <tr><td><span class="badge bg-blue-2">6</span></td><td>{{fa-icon "user"}} Susanne Roberts</td><td><nobr>{{fa-icon "clock-o"}} 4:00pm</nobr></td></tr>
+                                <tr><td><span class="badge bg-blue-2">7</span></td><td>{{fa-icon "user"}} Richard Downey</td><td><nobr>{{fa-icon "clock-o"}} 4:00pm</nobr></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="panel panel-default" style="height: 330px;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">News Feed</h3>
+                    </div>
+                    <div class="panels">
+                        <div class="panel-body">
+                            <img src="images/people/woman-4.jpg" class="user-img">
+                            <div><strong>twitted:</strong> "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</div>
+                        </div>
+                        <div class="panel-body">
+                            <img src="images/people/woman-4.jpg" class="user-img">
+                            <div><strong>twitted:</strong> "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</div>
+                        </div>
+                        <div class="panel-body">
+                            <img src="images/people/woman-4.jpg" class="user-img">
+                            <div><strong>twitted:</strong> "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</div>
+                        </div>
+                        <div class="panel-body">
+                            <img src="images/people/woman-4.jpg" class="user-img">
+                            <div><strong>twitted:</strong> "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="well" style="height: 330px; overflow: hidden; background-color: #fff;">
+                    <h4>{{fa-icon 'pie-chart'}} Global Store Sales</h4>
+                    <div style="padding-bottom: 10px;">
+                        {{morris-chart type="donut" options=simpleChart.options chartData=donutChart.data}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="alert alert-info"><strong>Congratulations!</strong> Your weekly and monthly sales are amazing, looks like its going to be a great year.</p>
+            </div>
+        </div>
+
+    </div>
+</div>

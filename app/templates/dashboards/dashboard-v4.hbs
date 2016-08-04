@@ -1,0 +1,96 @@
+<div class="dashboard-v2">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Ember Dashboard <small>by EmberJsThemes.com</small></h3>
+            <p class="pull-left">Welcome to your dashboard. You have 7 {{fa-icon 'bell'}} and 13 {{fa-icon 'envelope'}}.</p>
+            <p class="pull-right">{{fa-icon 'user'}} Last login Jan 05 2016 11:32am</p>
+        </div>
+    </div>
+
+    <div class="clearfix" style="clear: both;"> <hr> </div>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-lg-3">
+            {{#metric-box title="Product Sales" bottomText="Total Net Revenue" boxShadow=false borderLess=false badgeLabel="Today" badgeClass="bg-blue-2"}}
+                <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $1,230,054</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-3">
+            {{#metric-box title="YTD Goal" borderLess=false progressValue=80 showProgressLabel=true type="success" animate=true striped=true bottomText="Year 2016" boxShadow=false
+                badgeLabel="Year" badgeClass="bg-blue-2"}}
+                <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $18,758,321</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-3">
+            {{#metric-box title="Daily Gains" showProgressBar=true borderLess=false progressValue=75 showProgressLabel=true type="success" animate=true striped=true smallProgressBar=true boxShadow=false
+             badgeLabel="Daily" badgeClass="bg-blue-2"}}
+                <span class="value green">75%</span>
+            {{/metric-box}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-3">
+            {{#metric-box title="Month Average" showProgressBar=true borderLess=false progressValue=75 showProgressLabel=true type="danger" animate=true striped=true smallProgressBar=true boxShadow=false
+            badgeLabel="Weekly" badgeClass="bg-blue-2"}}
+                <span class="value red">25%</span>
+            {{/metric-box}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div  style="background-color: white; min-height: 390px; border: 1px solid #e3e3e3; margin: 0 -31px 0 -31px; padding: 0 15px 0 15px;">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-lg-8">
+                        <div style="padding: 15px 0px 0 15px;">
+                            <h4>Monthly Exports/Imports 2015</h4>
+                            <hr />
+                            {{flot-chart-live height="280px" options=linesChart.options data=linesChart.data}}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-4">
+                        <div style="padding: 15px 15px 0 15px;">
+                            <h4>Year Achievements</h4>
+                            <hr />
+                            {{#metric-box title="First Half Sales" boxShadow=false borderLess=true showProgressBar=true progressValue=80 smallProgressBar=true animate=true striped=true type="info"}}
+                                <span class="value">{{fa-icon "btc"}} 112,500,000</span>
+                            {{/metric-box}}
+                            {{#metric-box title="Second Half Sales" boxShadow=false borderLess=true showProgressBar=true progressValue=45 smallProgressBar=true animate=true striped=true type="info"}}
+                                <span class="value">{{fa-icon "btc"}} 140,000,000</span>
+                            {{/metric-box}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-4">
+            <h4>Stocks Performance</h4>
+            {{pages/stocks-table}}
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-4">
+            <h4>Scheduled Appointments</h4>
+            <table class="table table-hover table-bordered bottom-section bg-white">
+                <tbody>
+                <tr><td><span class="badge bg-blue-2">1</span></td><td>{{fa-icon "user"}} John Schmith</td><td><nobr>{{fa-icon "clock-o"}} 1:30pm</nobr></td></tr>
+                <tr><td><span class="badge bg-blue-2">2</span></td><td>{{fa-icon "user"}} David Goldman</td><td><nobr>{{fa-icon "clock-o"}} 2:00pm</nobr></td></tr>
+                <tr><td><span class="badge bg-blue-2">3</span></td><td>{{fa-icon "user"}} Robert Scott</td><td><nobr>{{fa-icon "clock-o"}} 2:30pm</nobr></td></tr>
+                <tr><td><span class="badge bg-blue-2">4</span></td><td>{{fa-icon "user"}} James Solis</td><td><nobr>{{fa-icon "clock-o"}} 3:00pm</nobr></td></tr>
+                <tr><td><span class="badge bg-blue-2">5</span></td><td>{{fa-icon "user"}} George Lewis</td><td><nobr>{{fa-icon "clock-o"}} 3:30pm</nobr></td></tr>
+                <tr><td><span class="badge bg-blue-2">6</span></td><td>{{fa-icon "user"}} Susanne Roberts</td><td><nobr>{{fa-icon "clock-o"}} 4:00pm</nobr></td></tr>
+                <tr><td><span class="badge bg-blue-2">7</span></td><td>{{fa-icon "user"}} Richard Downey</td><td><nobr>{{fa-icon "clock-o"}} 4:00pm</nobr></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-4">
+            <h4>Sales Charts</h4>
+            <div class="bottom-section bg-white" style="padding-top: 5px;">
+                {{morris-chart type="donut" options=simpleChart.options chartData=donutChart.data}}
+            </div>
+        </div>
+    </div>
+
+</div>
