@@ -1,7 +1,7 @@
 <div class="dashboard-v2">
 
     <div class="row">
-        <div class="col-xs-12 col-lg-offset-4 col-lg-4 top">
+        <div class="col-xs-12 col-lg-offset-4 col-lg-5 top">
             <h3 class="pull-left">Overview</h3>
             <a href="" class="pull-left active">Today</a>
             <a href="" class="pull-left">Month</a>
@@ -15,23 +15,39 @@
         <div class="col-xs-12 col-lg-8">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-lg-4">
-                    {{#metric-box title="Product Sales" bottomText="Total Net Revenue" boxShadow=false borderLess=false badgeLabel="Today" badgeClass="bg-blue-2"}}
-                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $1,230,054</span>
+                    {{#metric-box bottomText="Sessions" boxShadow=false borderLess=false}}
+                        <span class="icon-globe icons back-yellow" aria-hidden="true"></span>
+                        <span class="value">108,568</span>
                     {{/metric-box}}
                 </div>
                 <div class="col-xs-6 col-sm-6 col-lg-4">
-                    {{#metric-box title="Page Views" bottomText="Daily" borderLess=false boxShadow=false badgeLabel="Today" badgeClass="bg-blue-2"}}
-                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> 2,734</span>
+                    {{#metric-box bottomText="Page Views" borderLess=false boxShadow=false}}
+                        <span class="icon-eye icons back-red" aria-hidden="true"></span>
+                        <span class="value"> 120,390</span>
                     {{/metric-box}}
                 </div>
                 <div class="col-xs-6 col-sm-6 col-lg-4">
-                    {{#metric-box title="Sessions" bottomText="Daily" borderLess=false boxShadow=false badgeLabel="Today" badgeClass="bg-blue-2"}}
-                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> 204</span>
+                    {{#metric-box bottomText="Revenue" borderLess=false boxShadow=false}}
+                        <span class="icon-wallet icons back-blue" aria-hidden="true"></span>
+                        <span class="value"> $666.83</span>
                     {{/metric-box}}
                 </div>
                 <div class="col-xs-6 col-sm-6 col-lg-4">
-                    {{#metric-box title="Average Revenue" bottomText="Daily" borderLess=false boxShadow=false badgeLabel="Today" badgeClass="bg-blue-2"}}
-                        <span class="value"><span class="glyphicon glyphicon-triangle-top green" aria-hidden="true"></span> $3,370</span>
+                    {{#metric-box bottomText="RPS" borderLess=false boxShadow=false}}
+                        <span class="icon-graph icons back-yellow" aria-hidden="true"></span>
+                        <span class="value"> $6.14</span>
+                    {{/metric-box}}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-4">
+                    {{#metric-box bottomText="RPM" borderLess=false boxShadow=false}}
+                        <span class="icon-graph icons back-red" aria-hidden="true"></span>
+                        <span class="value"> $5.54</span>
+                    {{/metric-box}}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-4">
+                    {{#metric-box bottomText="Daily Average" borderLess=false boxShadow=false}}
+                        <span class="icon-pie-chart icons back-blue" aria-hidden="true"></span>
+                        <span class="value"> $222.28</span>
                     {{/metric-box}}
                 </div>
             </div>
