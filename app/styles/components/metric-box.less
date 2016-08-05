@@ -3,14 +3,14 @@
 
     .metric {
         width: 100%;
-        height: 120px;
+        height: 90px;
         border-top: 1px solid #e3e3e3;
         border-bottom: 1px solid #e3e3e3;
         border-left: 1px solid #e3e3e3;
         border-right: 1px solid #e3e3e3;
-        padding: 15px;
-        margin-bottom: 15px;
         position: relative;
+        margin-bottom: 15px;
+        background-color: #cddee6;
 
         &.large-value {
             span.value {
@@ -22,9 +22,9 @@
             }
         }
 
-        span.value {
-            font-size: 20pt;
-            display: block;
+        span.icons {
+            font-size: 28pt;
+            display: inline-block;
             &.md {
                 font-size: 16pt !important;
             }
@@ -32,8 +32,25 @@
                 font-size: 12pt !important;
             }
             line-height: 40px;
-            padding-top: 10px;
-            .ellipsis-text;
+            padding: 7.4% 8%;
+            color: #F2F2F2;
+        }
+
+        span.value {
+            font-size: 20pt;
+            display: inline-block;
+            &.md {
+                font-size: 16pt !important;
+            }
+            &.sm {
+                font-size: 12pt !important;
+            }
+            line-height: 40px;
+            padding-top: 6%;
+            vertical-align: top;
+            width: 71%;
+            text-align: center;
+            margin-left: -4px;
         }
 
         h6 {
@@ -50,6 +67,18 @@
 
         .red {
             color: red;
+        }
+
+        .back-yellow {
+            background-color: #DBA159;
+        }
+
+        .back-red {
+            background-color: #F25C54;
+        }
+
+        .back-blue {
+            background-color: #46ACC2;
         }
 
         .green {
@@ -71,10 +100,12 @@
         div.bottom-text {
             position: absolute;
             bottom: 10px;
-            max-width: 100%;
+            left: 27%;
+            width: 73%;
             color: #777;
+            text-align: center;
             span {
-                font-size: 11px;
+                font-size: 16px;
             }
         }
 
